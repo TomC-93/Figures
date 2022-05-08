@@ -3,6 +3,10 @@ Maps with ggplot2
 Thomas Carlin
 2022-04-27
 
+``` r
+knitr::opts_chunk$set(fig.path='Figs/')
+```
+
 # Summary
 
 This guide will provide a brief introduction to creating and annotating
@@ -55,7 +59,7 @@ ggplot(data = world) + # Tells ggplot what dataset we're using
   geom_sf() # Draws shapefiles
 ```
 
-![](Mapping-with-ggplot2_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](Figs/unnamed-chunk-3-1.png)<!-- -->
 
 ### Adding Colour
 
@@ -104,7 +108,7 @@ ggplot(data = world) + # Tells ggplot what dataset we're using
   aes(fill = continent) #
 ```
 
-![](Mapping-with-ggplot2_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](Figs/unnamed-chunk-5-1.png)<!-- -->
 
 ### Borders, Coordinates, Colour, Legend
 
@@ -124,7 +128,7 @@ ggplot(data = world) +
   theme(legend.position="bottom")  ## Moves legend to bottom
 ```
 
-![](Mapping-with-ggplot2_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](Figs/unnamed-chunk-6-1.png)<!-- -->
 
 #### Specifying colours
 
@@ -194,7 +198,7 @@ ggplot(data = world) +
   annotate("rect", xmin = -57, xmax = -49, ymin = 0, ymax = 8, color="red", alpha=0)
 ```
 
-![](Mapping-with-ggplot2_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](Figs/unnamed-chunk-7-1.png)<!-- -->
 
 ## Modifying Countries
 
@@ -224,7 +228,7 @@ ggplot(data = FRA) + # Plot confirming correct polygons (row 3 is French Guiana,
   ggtitle("French Territories") # Adding a Title 
 ```
 
-![](Mapping-with-ggplot2_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](Figs/unnamed-chunk-8-1.png)<!-- -->
 
 ``` r
 ggplot(data = split[3,]) + # Plot confirming correct polygons (row 3 is French Guiana, row 10 is mainland France)
@@ -232,7 +236,7 @@ ggplot(data = split[3,]) + # Plot confirming correct polygons (row 3 is French G
   ggtitle("French\nGuiana") # Adding a Title - "\n" adds a line break
 ```
 
-![](Mapping-with-ggplot2_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
+![](Figs/unnamed-chunk-8-2.png)<!-- -->
 
 ``` r
 guy <- split[3,] # Isolate polygon for French Guiana
@@ -274,7 +278,7 @@ ggplot(data = world2) +
     axis.title.y=element_blank())
 ```
 
-![](Mapping-with-ggplot2_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](Figs/unnamed-chunk-10-1.png)<!-- -->
 
 ### Splitting Russia
 
@@ -295,7 +299,7 @@ ggplot(data = rus) + # Plot confirming Russian polygons work
   geom_sf() 
 ```
 
-![](Mapping-with-ggplot2_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](Figs/unnamed-chunk-11-1.png)<!-- -->
 
 Let’s divide Russia’s main regions (Central, Far Eastern, Northwestern,
 Siberian, Urals, Volga) along the Ural mountains. First, we need to
@@ -385,4 +389,4 @@ ggplot(data = world3) +
     axis.title.y=element_blank())
 ```
 
-![](Mapping-with-ggplot2_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](Figs/unnamed-chunk-14-1.png)<!-- -->
