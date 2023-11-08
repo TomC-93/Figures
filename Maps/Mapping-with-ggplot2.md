@@ -1,4 +1,4 @@
-Maps with ggplot2
+Mapping with ggplot2
 ================
 Thomas Carlin
 2022-04-27
